@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id="ftpUtil" class="ucb.batch.util.imp.FTPUtil">
+		<property name="ftpServer">
+			<value>10.210.4.201</value>
+		</property>
+		<property name="ftpUser">
+			<value>ftp0601</value>
+		</property>
+		<property name="ftpPass">
+			<value>ftp0601</value>
+		</property>
+		<property name="workingDirectory">
+			<value>/</value>
+		</property>
+		<property name="localDirectory">
+			<value>c:/report/</value>
+		</property>
+	</bean>
+	<bean id="ftpUtil2" class="ucb.batch.util.imp.FTPUtil">
+		<property name="ftpServer">
+			<value>ESBFXA.ESUNBANK.COM.TW</value>
+		</property>
+		<property name="ftpUser">
+			<value>FXFTP</value>
+		</property>
+		<property name="ftpPass">
+			<value>ESBFTP</value>
+		</property>
+		<property name="workingDirectory">
+			<value>home/esefstwt/ftpin/</value>
+		</property>
+		<property name="localDirectory">
+			<value>c:/DEV/report/</value>
+		</property>
+	</bean>
+	<bean id="ftpUtil3" class="ucb.batch.util.imp.FTPUtil">
+		<property name="ftpServer">
+			<value>ESBFXA.ESUNBANK.COM.TW</value>
+		</property>
+		<property name="ftpUser">
+			<value>FXFTP</value>
+		</property>
+		<property name="ftpPass">
+			<value>ESBFTP</value>
+		</property>
+		<property name="workingDirectory">
+			<value>exchange</value>
+		</property>
+		<property name="localDirectory">
+			<value>c:/report/</value>
+		</property>
+	</bean>
+</beans>

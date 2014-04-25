@@ -1,0 +1,66 @@
+2014/04/21 11:30:49 class ucb.report.ReportUCB1001: start.
+2014/04/21 11:30:49 class ucb.batch.util.imp.FTPUtil: start.
+2014/04/21 11:30:49 FTP Config file name : file:/C:/PROD/ucb_batch.jar!/ftpconfig.xml
+2014/04/21 11:30:49 FTP Config file name after replaced : /C:/PROD/ftpconfig.xml
+2014/04/21 11:30:49 class ucb.batch.util.XmlParser: XML File name : /C:/PROD/ftpconfig.xml
+2014/04/21 11:30:49 class ucb.batch.util.XmlParser: XML Bean ID : ftpUtil2
+2014/04/21 11:30:49 class ucb.batch.util.BranchList: start.
+2014/04/21 11:30:49 class ucb.batch.support.dataAccessor.imp.BranchDataAccessor: start.
+2014/04/21 11:30:49 Branch List File Path : c:/DEV/BATCH/BRANCH
+2014/04/21 11:30:49 class ucb.report.dataAccessor.ReportUCB1001DataAccessor: start.
+2014/04/21 11:31:10 ucb.batch.util.dataSource.ConnectionManager@470e2030
+java.sql.SQLException: Io exception: The Network Adapter could not establish the connection
+	at oracle.jdbc.dbaccess.DBError.throwSqlException(DBError.java:134)
+	at oracle.jdbc.dbaccess.DBError.throwSqlException(DBError.java:179)
+	at oracle.jdbc.dbaccess.DBError.throwSqlException(DBError.java:333)
+	at oracle.jdbc.driver.OracleConnection.<init>(OracleConnection.java:404)
+	at oracle.jdbc.driver.OracleDriver.getConnectionInstance(OracleDriver.java:468)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:314)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at ucb.batch.util.dataSource.ConnectionManager.getDataSource1Connection(ConnectionManager.java:84)
+	at ucb.batch.util.dataSource.ConnectionManager.getConnection1(ConnectionManager.java:184)
+	at ucb.report.dataAccessor.ReportUCB1001DataAccessor.getReportUCB1001QueryResult(ReportUCB1001DataAccessor.java:39)
+	at ucb.report.ReportUCB1001.genData(ReportUCB1001.java:130)
+	at ucb.report.ReportUCB1001.exec(ReportUCB1001.java:89)
+	at ucb.report.ReportUCB1001.main(ReportUCB1001.java:67)
+2014/04/21 11:31:10 java.lang.NullPointerException
+2014/04/21 11:31:10 REPORT SUCCESS?
+2014/04/21 17:15:03 class ucb.report.ReportUCB1001: start.
+2014/04/21 17:15:03 class ucb.batch.util.imp.FTPUtil: start.
+2014/04/21 17:15:03 FTP Config file name : /C:/DEV/workspace_V3ALL/ucb_batch/bin/ftpconfig.xml
+2014/04/21 17:15:03 FTP Config file name after replaced : /C:/DEV/workspace_V3ALL/ucb_batch/bin/ftpconfig.xml
+2014/04/21 17:15:03 class ucb.batch.util.XmlParser: XML File name : /C:/DEV/workspace_V3ALL/ucb_batch/bin/ftpconfig.xml
+2014/04/21 17:15:03 class ucb.batch.util.XmlParser: XML Bean ID : ftpUtil2
+2014/04/21 17:15:03 class ucb.batch.util.BranchList: start.
+2014/04/21 17:15:03 class ucb.batch.support.dataAccessor.imp.BranchDataAccessor: start.
+2014/04/21 17:15:03 Branch List File Path : c:/DEV/BATCH/BRANCH
+2014/04/21 17:15:03 class ucb.report.dataAccessor.ReportUCB1001DataAccessor: start.
+2014/04/21 21:08:31 class ucb.report.ReportUCB1001: start.
+2014/04/21 21:08:31 class ucb.batch.util.imp.FTPUtil: start.
+2014/04/21 21:08:31 FTP Config file name : /C:/DEV/workspace_V3ALL/ucb_batch/bin/ftpconfig.xml
+2014/04/21 21:08:31 FTP Config file name after replaced : /C:/DEV/workspace_V3ALL/ucb_batch/bin/ftpconfig.xml
+2014/04/21 21:08:31 class ucb.batch.util.XmlParser: XML File name : /C:/DEV/workspace_V3ALL/ucb_batch/bin/ftpconfig.xml
+2014/04/21 21:08:31 class ucb.batch.util.XmlParser: XML Bean ID : ftpUtil2
+2014/04/21 21:08:31 class ucb.batch.util.BranchList: start.
+2014/04/21 21:08:31 class ucb.batch.support.dataAccessor.imp.BranchDataAccessor: start.
+2014/04/21 21:08:31 Branch List File Path : c:/DEV/BATCH/BRANCH
+2014/04/21 21:08:31 class ucb.report.dataAccessor.ReportUCB1001DataAccessor: start.
+2014/04/21 21:08:52 ucb.batch.util.dataSource.ConnectionManager@3d012ddd
+java.sql.SQLException: Io exception: The Network Adapter could not establish the connection
+	at oracle.jdbc.dbaccess.DBError.throwSqlException(DBError.java:134)
+	at oracle.jdbc.dbaccess.DBError.throwSqlException(DBError.java:179)
+	at oracle.jdbc.dbaccess.DBError.throwSqlException(DBError.java:333)
+	at oracle.jdbc.driver.OracleConnection.<init>(OracleConnection.java:404)
+	at oracle.jdbc.driver.OracleDriver.getConnectionInstance(OracleDriver.java:468)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:314)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at ucb.batch.util.dataSource.ConnectionManager.getDataSource1Connection(ConnectionManager.java:84)
+	at ucb.batch.util.dataSource.ConnectionManager.getConnection1(ConnectionManager.java:184)
+	at ucb.report.dataAccessor.ReportUCB1001DataAccessor.getReportUCB1001QueryResult(ReportUCB1001DataAccessor.java:39)
+	at ucb.report.ReportUCB1001.genData(ReportUCB1001.java:130)
+	at ucb.report.ReportUCB1001.exec(ReportUCB1001.java:89)
+	at ucb.report.ReportUCB1001.main(ReportUCB1001.java:67)
+2014/04/21 21:08:52 java.lang.NullPointerException
+2014/04/21 21:08:52 REPORT SUCCESS！
