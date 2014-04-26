@@ -2,9 +2,9 @@
 <BatchConfig>
 	<DatabaseConfig1>
 	    <dbDriverName>oracle.jdbc.driver.OracleDriver</dbDriverName>
-	    <dbUser>UCB</dbUser>
-	    <dbPassword>168</dbPassword>
-	    <dbURI>jdbc:oracle:thin:@192.168.50.5:1521:HQTEST</dbURI>
+	    <dbUser>DY</dbUser>
+	    <dbPassword>qwe</dbPassword>
+	    <dbURI>jdbc:oracle:thin:@localhost:1521:orcl</dbURI>
 	</DatabaseConfig1>
 	<DatabaseConfig2>
 	    <dbDriverName>oracle.jdbc.driver.OracleDriver</dbDriverName>
