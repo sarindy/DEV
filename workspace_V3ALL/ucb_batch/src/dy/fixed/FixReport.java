@@ -25,9 +25,9 @@ public class FixReport {
         try {
         	callableStatement = conn.prepareCall(CALL_SP_FID);
         	callableStatement.setInt(1, 702);
-    		callableStatement.registerOutParameter(1,  OracleTypes.CURSOR);
+    		callableStatement.registerOutParameter(2,  OracleTypes.CURSOR);
     		callableStatement.executeUpdate();
-    		rs = (ResultSet) callableStatement.getObject(1);
+    		rs = (ResultSet) callableStatement.getObject(2);
             while (rs.next()){     
 
             	System.out.println(rs.getString(FD_ID));

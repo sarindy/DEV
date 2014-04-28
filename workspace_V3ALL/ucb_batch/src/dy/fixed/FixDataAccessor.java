@@ -20,7 +20,7 @@ public class FixDataAccessor extends AbstractBatch {
 	private static final String APPLICATION_DATE = "APPLICATION_DATE";
 	private static final String PRINCIPAL = "PRINCIPAL";
 	
-	private static final String CALL_SP_FID = "{call SP_FIX(?)}";
+	private static final String CALL_SP_FID = "{call SP_FIX(?,?)}";
 	
 	public List<FixRow> getReportQuery(ParameterContext context){
 		List<FixRow> arrayList = new ArrayList<FixRow>(); 
@@ -29,7 +29,8 @@ public class FixDataAccessor extends AbstractBatch {
         ResultSet rs = null;
         try {
         	callableStatement = conn.prepareCall(CALL_SP_FID);
-    		callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
+        	callableStatement.setString(1, "");
+    		callableStatement.registerOutParameter(2, OracleTypes.CURSOR);
     		callableStatement.executeUpdate();
     		rs = (ResultSet) callableStatement.getObject(1);
             while (rs.next()){     
