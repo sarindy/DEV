@@ -21,43 +21,18 @@ import ucb.batch.util.ParameterContext;
 public class HashtableParameterContext implements ParameterContext {
     
     @SuppressWarnings("unchecked")
-    private Map context = new Hashtable();
-    /* (non-Javadoc)
-     * @see com.esb.fx.batch.util.ParameterContext#setValue(java.lang.String, java.lang.Object)
-     */
-    /*
-     * (non-Javadoc)
-     * 
-     * @see com.esb.common.util.ExpressionContext#setValue(java.lang.String,
-     *      java.lang.Object)
-     */
-    @SuppressWarnings("unchecked")
-    public void setValue(String name, Object value) {
-        context.put(name, value);
-    }
+    private String context =null;
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see com.esb.common.util.ExpressionContext#getValue(java.lang.String)
-     */
-    public Object getValue(String name) {
-        return context.get(name);
-    }
-    
-    @SuppressWarnings("unchecked")
-    public String toString() {
-    	StringBuffer sb = new StringBuffer();
-    	if (context != null) {
-    		Set set = context.entrySet();
-    		Iterator i = set.iterator();
-    		while (i.hasNext()) {
-    			Map.Entry entry = (Map.Entry) i.next();
-    			sb.append('[').append(entry.getKey()).append(']').append('=').append('[');
-    			sb.append(entry.getValue()).append(']').append(';');
-    		}
-    	}
-    	return sb.toString();
-    }
+	public void setValue(String name, Object value) {
+		// TODO Auto-generated method stub
+		
+	}
 
+	public Object getValue(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+   
 }
