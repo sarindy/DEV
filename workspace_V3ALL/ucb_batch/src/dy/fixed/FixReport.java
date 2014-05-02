@@ -10,13 +10,11 @@ import ucb.batch.util.dataSource.ConnectionManager;
 import ucb.batch.util.dataSource.DataSourceUtility;
 
 public class FixReport {
-	private static final String FD_ID = "FD_ID";
-	private static final String CUSTACCTID = "CUSTACCTID";
-	private static final String INT_RATE = "INT_RATE";
-	private static final String APPLICATION_DATE = "APPLICATION_DATE";
-	private static final String PRINCIPAL = "PRINCIPAL";
+	private static final String NAME = "NAME";
+	private static final String DESCRIPTION = "DESCRIPTION";
 	
-	private static final String CALL_SP_FID = "{call SP_FIX(?,?)}";
+	
+	private static final String CALL_SP_FID = "{call GETACCTCODEBYACCTID(?,?)}";
 
 	public static void main(String[] args) {
 		Connection conn = ConnectionManager.getConnection1();
@@ -24,17 +22,15 @@ public class FixReport {
         ResultSet rs = null;
         try {
         	callableStatement = conn.prepareCall(CALL_SP_FID);
-        	callableStatement.setInt(1, 702);
+        	callableStatement.setInt(1, 268);
     		callableStatement.registerOutParameter(2,  OracleTypes.CURSOR);
     		callableStatement.executeUpdate();
     		rs = (ResultSet) callableStatement.getObject(2);
             while (rs.next()){     
 
-            	System.out.println(rs.getString(FD_ID));
-            	System.out.println(rs.getString(CUSTACCTID));
-            	System.out.println(rs.getString(INT_RATE));
-            	System.out.println(rs.getString(APPLICATION_DATE));
-            	System.out.println(rs.getString(PRINCIPAL));
+            	System.out.println(rs.getString(NAME));
+            	System.out.println(rs.getString(DESCRIPTION));
+            	
 				
                
             }
