@@ -14,7 +14,9 @@ public class FixReport {
 	private static final String DESCRIPTION = "DESCRIPTION";
 	
 	
-	private static final String CALL_SP_FID = "{call GETACCTCODEBYACCTID(?,?)}";
+	private static final String CALL_SP_FID = "{call SP_GETACCTDESC(?,?)}";
+	private static final String CALL_SP_ALL_DESC="{call SP_GETALLACCTCODE(?)}";
+	
 
 	public static void main(String[] args) {
 		Connection conn = ConnectionManager.getConnection1();
@@ -26,6 +28,29 @@ public class FixReport {
     		callableStatement.registerOutParameter(2,  OracleTypes.CURSOR);
     		callableStatement.executeUpdate();
     		rs = (ResultSet) callableStatement.getObject(2);
+            while (rs.next()){     
+
+            	System.out.println(rs.getString(NAME));
+            	System.out.println(rs.getString(DESCRIPTION));
+            	
+				
+               
+            }
+        } catch (SQLException e) {
+        	
+			e.printStackTrace();
+        }        
+        DataSourceUtility.closeResultSet(rs);
+        DataSourceUtility.closeStatment(callableStatement);
+        DataSourceUtility.closeConnection(conn);
+        
+        //New SP
+        conn=ConnectionManager.getConnection1();
+                try {
+        	callableStatement = conn.prepareCall(CALL_SP_ALL_DESC);
+    		callableStatement.registerOutParameter(1,  OracleTypes.CURSOR);
+    		callableStatement.executeUpdate();
+    		rs = (ResultSet) callableStatement.getObject(1);
             while (rs.next()){     
 
             	System.out.println(rs.getString(NAME));
